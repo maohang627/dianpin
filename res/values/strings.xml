@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">1号V店</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="net_error">当前网络不可用，请先连接Internet！</string>
+    <string name="load_title"></string>
+	<string name="load_content"><strong>加载中，请稍候…</strong></string>
+    <string name="second_blank">&#160;</string>
+    
+    <string name="errcode_success">分享成功</string>
+    <string name="errcode_failure">分享失败</string>
+	<string name="errcode_cancel">分享取消</string>
+	<string name="errcode_deny">分享被拒绝</string>
+	<string name="errcode_unknown">分享返回</string>
+    
+    <!-- 购物车 -->
+    <string name="shopcart_label">购物车</string>
+    <string name="shopcart_none_label">空的购物车</string>
+    <string name="shopping_cart_proimage_label">商品图片</string>
+    <string name="shopcart_totalprice_label">商品总价(不含运费) </string>
+    <string name="shopcart_settle_button">删除</string>
+    
+    <!-- 我的地址 -->
+    <string name="address_label">我的地址</string>
+ 	<string name="address_list_label">我的地址列表</string>
+    
+    <!-- 订单 -->
+    <string name="order_label">订单</string>
+    <string name="order_consignee_address_label">收货人地址</string>
+    <string name="province_label">省份</string>
+    <string name="city_label">城市</string>
+    <string name="area_label">区域</string>    
+    <string name="store_logo_img_label">店铺图标</string>
+    <string name="coupon_label">订单</string>
+    <string name="coupon_check_msg">为了您的账户安全，我们已发送验证码到您的手机</string>
+    <string name="coupon_check_code_send">验证码已发送至</string>
+     
+    
+    
+    
+   
+  
+    
+    
+</resources>

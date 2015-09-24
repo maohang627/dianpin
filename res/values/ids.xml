@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="push_getpushinformation" type="id"></item>
+    <item name="baidu_location_callback" type="id"></item>
+    <item type="id" name="relWelcomeImg">false</item>
+
+</resources>

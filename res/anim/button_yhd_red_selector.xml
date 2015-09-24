@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:state_pressed="true">
+        
+        
+        <shape>
+            
+            <!-- 实心 -->
+            <solid android:color="@color/yhd_shen_red"/>
+
+            <!-- 圆角 -->
+            <corners
+                android:radius="27dp" />
+            
+            <padding
+                android:left="16dp"
+                android:top="8dp"
+                android:right="16dp"
+                android:bottom="8dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        
+        <shape>
+            <!-- 实心 -->
+            <solid android:color="@color/yhd_red"/>
+
+            <!-- 圆角 -->
+            <corners
+                android:radius="27dp" />
+            
+            <padding
+                android:left="16dp"
+                android:top="8dp"
+                android:right="16dp"
+                android:bottom="8dp" />
+        </shape>
+    </item>
+
+</selector>

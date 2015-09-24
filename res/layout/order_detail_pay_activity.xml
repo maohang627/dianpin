@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="16dp"
+    android:background="@color/bai_se"
+    android:orientation="vertical" >
+
+    <!-- odpa 是文件名首字母组合 用来标识id所属 -->
+
+    <!-- 订单编号 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="left"
+            android:paddingLeft="5dip"
+            android:text="订单编号"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odpa_orderno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 下单时间 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="left"
+            android:paddingLeft="5dip"
+            android:text="下单时间"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odpa_createtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 收货地址 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="left"
+            android:paddingLeft="5dip"
+            android:text="收货地址"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 收货人姓名 -->
+
+            <TextView
+                android:id="@+id/odpa_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <!-- 收货人地址 -->
+
+            <TextView
+                android:id="@+id/odpa_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <!-- 收货人详细地址 -->
+
+            <TextView
+                android:id="@+id/odpa_detailed_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <!-- 收货人电话 -->
+
+            <TextView
+                android:id="@+id/odpa_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 包裹数 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="left"
+            android:paddingLeft="5dip"
+            android:text="包裹数"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/odpa_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/odpa_count_has"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/shen_hui_se"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>   
+    
+    <View
+        android:id="@+id/odpa_pay_service_type_line"
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginBottom="16sp"
+	    android:layout_marginTop="16sp"
+	    android:background="@color/liang_hui_se" />
+
+    <!-- 在线支付-等待支付 -->    
+    <RelativeLayout
+        android:id="@+id/odpa_pay_service_type_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bai_se"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <!-- 支付方式 -->
+
+        <TextView
+            android:id="@+id/odpa_pay_service_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="支付方式"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+        
+        <Spinner
+            android:id="@+id/odpa_online_pay"
+            android:layout_width="@dimen/spinner_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:paddingRight="5dp"
+            android:layout_centerVertical="true"
+            android:background="@anim/spinner_bg_up_down_selector"
+            android:gravity="center"
+            android:text="" />
+    </RelativeLayout>
+    
+    <!-- 非 在线支付-等待支付 -->
+    <LinearLayout
+        android:id="@+id/odpa_no_pay_service_type_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+        <View
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginBottom="16sp"
+	        android:layout_marginTop="16sp"
+	        android:background="@color/liang_hui_se" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            
+            <TextView
+	            android:id="@+id/odpa_no_pay_service_type"
+	            android:layout_width="80sp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="16dp"
+	            android:gravity="left"
+	            android:paddingLeft="5dip"
+	            android:text="支付方式"
+	            android:textColor="@color/gray_111111"
+	            android:textSize="16sp" />            
+
+            <TextView
+                android:id="@+id/odpa_no_pay_service_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View
+        android:id="@+id/odpa_other_pay_line"
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:layout_marginBottom="16sp"
+	    android:layout_marginTop="16sp"
+	    android:background="@color/liang_hui_se" />
+    
+    <!-- 还需支付 -->
+    <RelativeLayout
+        android:id="@+id/odpa_other_pay_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:text="还需支付"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/odpa_other_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="￥"
+                android:textColor="@color/yhd_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/odpa_other_tran_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="16dp"
+                android:text=""
+                android:textColor="@color/shen_hui_se"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 立即支付 -->
+    <LinearLayout
+        android:id="@+id/odpa_pay_immediately_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        
+        <View
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginBottom="16sp"
+	        android:layout_marginTop="16sp"
+	        android:background="@color/liang_hui_se" />
+
+        <Button 
+            android:id="@+id/odpa_pay_immediately_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_lijizhifu"
+            android:gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+</LinearLayout>

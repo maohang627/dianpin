@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="20dp"
+    android:background="@color/bai_se"
+    android:orientation="vertical" >
+
+    <!-- odipca 是文件名首字母组合 用来标识id所属 -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 发票抬头 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="发票抬头"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odipca_invoice_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 公司内容-->
+
+    <LinearLayout
+        android:id="@+id/odipca_invoice_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
+       <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+       
+        <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	        
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="单位名称"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odipca_invoice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text=""
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+        
+       </LinearLayout> 
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+
+    <!-- 发票内容 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="发票内容"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odipca_invoice_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+    
+</LinearLayout>

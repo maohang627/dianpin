@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Webview界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- wa 是当前文件首字母的组合 用来做标志 -->
+    
+    <!-- 标题栏 -->
+	<RelativeLayout 
+	    android:id="@+id/wa_head_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50.0dip"
+	    android:background="@color/bai_se"
+	    android:gravity="top"
+	    android:visibility="gone" >
+	
+	    <TextView
+	        android:id="@+id/wa_head_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:background="@drawable/button_back"
+	        android:gravity="left"
+	        android:paddingLeft="16sp"
+	        android:text="" />
+	
+	    <TextView
+	        android:id="@+id/wa_head_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:layout_centerVertical="true"
+	        android:text=""
+	        android:textSize="18sp" />
+	
+	    <TextView
+	        android:id="@+id/wa_head_right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:paddingRight="16sp"
+	        android:text=""
+	        android:textSize="16sp"
+	        android:textColor="@color/yhd_red" />
+	
+	</RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/wa_webview_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:progressDrawable="@drawable/progress_red" />
+
+    <WebView
+        android:id="@+id/wa_web_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+    
+    <RelativeLayout
+	    android:id="@+id/wa_web_error"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/error_net"
+	    android:visibility="gone" >    
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wa_web_controller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/wa_web_controller_diviver"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray_111111" />
+
+        <ImageButton
+            android:id="@+id/wa_web_pre_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/share_bottom_left_btn_selector" />
+
+        <ImageButton
+            android:id="@+id/wa_web_next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/web_pre_btn"
+            android:background="@drawable/share_bottom_right_btn_selector" />
+
+        <ImageButton
+            android:id="@+id/wa_web_refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/web_next_btn"
+            android:background="@drawable/share_bottom_refresh_btn_selector" />
+
+        <Button
+            android:id="@+id/wa_web_home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/share_bottom_share_btn_selector"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="回首页"
+            android:textColor="@color/coffee" />
+    </RelativeLayout>
+
+</LinearLayout>

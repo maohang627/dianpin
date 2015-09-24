@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/bai_se"
+    android:paddingLeft="5dp" >
+
+    <!-- opi 是当前文件首字母的组合 用来做标志 -->
+
+
+    <!-- 支付方式名称 -->
+
+    <TextView
+        android:id="@+id/opi_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:paddingBottom="16sp"
+        android:paddingTop="16sp"
+        android:text=""
+        android:textSize="16sp" />
+
+</LinearLayout>

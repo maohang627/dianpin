@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bai_se"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+    
+    <!-- 抵用券商家信息 -->
+	<RelativeLayout 
+	    android:id="@+id/coupon_head"
+	    android:layout_width="fill_parent"
+	    android:layout_height="40dp"
+	    android:background="@color/gray_cccccc"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal" 
+	    android:visibility="gone">
+	
+	        <TextView
+	            android:id="@+id/coupon_type_desc"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"      		
+	        			android:layout_alignParentLeft="true"
+	        			android:layout_marginLeft="5dp"
+	        			android:padding="5dp"
+	            android:text=""
+	            android:textColor="@color/gray_111111"
+	            android:textSize="16sp" />
+	        
+	        <TextView
+	            android:id="@+id/coupon_card_num"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	        			android:layout_alignParentRight="true"      		
+	        			android:layout_marginRight="20dp"  
+	        			android:padding="5dp"     			
+	            android:text=""
+	            android:textColor="@color/yhd_red"
+	           />
+	
+	        <TextView          
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	        			android:layout_alignParentRight="true"      		
+	        			android:layout_marginRight="5dp"  
+	        			android:padding="5dp"      				
+	            android:text="张"
+	            android:textColor="@color/gray_111111"
+	           />			
+	</RelativeLayout>
+    
+    
+    <!-- 抵用券详细信息 -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/bai_se"
+	    android:baselineAligned="false"
+	    android:orientation="horizontal">
+		  
+	    <LinearLayout
+	        android:layout_width="0sp"
+	        android:layout_height="90dp"
+	        android:layout_weight="1" >
+	
+	        <CheckBox
+	            android:id="@+id/coupon_checkbox"
+	            android:layout_width="@dimen/cart_cb_size"
+	            android:layout_height="@dimen/cart_cb_size"
+	            android:layout_gravity="center"
+	            android:layout_marginLeft="16sp"
+	            android:layout_marginRight="@dimen/cart_spacing"
+	            android:background="@anim/shopcart_check_box_selector"
+	            android:button="@null"
+	            android:checked="false"
+	            android:clickable="false"
+	            android:focusable="false"
+	            android:gravity="center" />
+	    </LinearLayout>
+		  		    	
+	    <RelativeLayout
+	        android:layout_width="0sp"
+	        android:layout_height="90dp"
+	        android:layout_weight="5"
+	        android:orientation="vertical" >
+	        
+	        <ImageView	
+	            android:id="@+id/coupon_img"	      
+		        android:layout_width="80dp"
+		        android:layout_height="80dp"
+		        android:background="@drawable/coupon"
+		        android:layout_centerVertical="true"
+	        	android:layout_alignParentLeft="true"        				        				        			
+		        android:gravity="center"/>
+	        
+	        <TextView
+	            android:id="@+id/coupon_amount"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+	            android:layout_alignParentLeft="true"
+	            android:padding="8dp"
+	            android:layout_marginBottom="20dp"
+	            android:layout_marginLeft="15dp"
+	            android:text=""
+	            android:textColor="@color/bai_se"
+	            android:textSize="16sp" />
+	
+	
+	      
+	        
+	        <LinearLayout 
+	             android:id="@+id/coupon_description"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	       		android:layout_alignParentTop="true"
+	        	android:layout_alignParentLeft="true"
+	        	android:layout_marginLeft="80dp"
+	        	android:layout_marginTop="8dp"
+	        	android:padding="8dp"	           
+	            android:textColor="@color/gray_111111"
+	            android:textSize="16sp">
+	             <TextView	   
+	            android:id="@+id/coupon_description1"        
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"	       			        	
+	            android:text=""/>
+	             <TextView	
+	            android:id="@+id/coupon_description2"             
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/yhd_red"	       			        	
+	            android:text=""/>
+	             <TextView
+	            android:id="@+id/coupon_description3"  	           
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"	       			        	
+	            android:text=""/>
+	             <TextView	 
+	            android:id="@+id/coupon_description4"            
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/yhd_red"	   	       			        	
+	            android:text=""/>
+	            
+	            
+	        </LinearLayout>
+	
+	        <TextView
+	            android:id="@+id/coupon_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	        	android:layout_alignParentLeft="true"
+	        	android:layout_alignParentBottom="true"
+	        	android:layout_marginLeft="80dp"
+	        	android:layout_marginBottom="8dp"
+	        	android:padding="8dp"
+	            android:text=""
+	            android:textColor="@color/gray_B8B8B8"
+	            android:textSize="14sp" />
+
+	        
+	    </RelativeLayout>
+	
+	</LinearLayout>
+
+</LinearLayout>

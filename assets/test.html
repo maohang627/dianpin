@@ -1,0 +1,86 @@
+<html>
+	<head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv = "Content-Type" content="text/html; charset=UTF-8"/>
+		<script style="text/javascript">
+		
+			function toNative(nativeName)
+	        {
+	            var from = window.location.href;
+	            var params = '{ "nativeName" : "'+nativeName+'", "shoppingBizType" : "FAST_VDIAN_MOBILE" }';
+	            
+	            window.vdian.toNative(from, params);
+	        }
+		
+			takePhoto = function(){
+				console.log("take photo");
+				//vdian.takePhoto(); // 正方形
+				vdian.takeRectanglePhoto(); // 长方形
+			};
+			
+			notifyData = function(id){
+				console.log(id);
+				displayPhoto(getData(id));
+			};
+			
+			getData = function(id){
+				console.log(id);
+				return vdian.getData(id);
+			};
+			
+			displayPhoto = function(data){
+				console.log(data);
+				document.getElementById('cameraImg').src = 'data:image/png;base64,' + data;
+			};
+			
+			getDeviceInfo = function(){
+				var deviceInfo = vdian.getDeviceInfo();
+				document.getElementById('deviceInfo').innerHTML = deviceInfo;
+			};
+			
+			getAlbum = function(){
+				vdian.getAlbum(); // 正方形
+				//vdian.getRectangleAlbum(); // 长方形
+			}
+			
+			shareContent = function(){
+				var msg = "hello, this is from android";
+				vdian.shareContent(msg);
+			}
+			
+			function goBack()
+	        {
+	        	vdian.gobackFromJSNavigation();
+	        	window.history.back(-1);
+	        }
+	        
+	        function updateCartCountFromNative()
+	        {
+	        	alert('updateCartCountFromNative-Test1');
+	        }
+
+		</script>
+	
+	</head>
+
+	<body>
+	    <a href="javascript:void(0)" onclick="javascript:goBack();"><返回</a>
+	    
+		<H1>H5Test1</H1>	
+		<a href="javascript:void(0)" onclick="javascript:toNative('ShopCartNoneActivity');">空购物车</a>
+        <br /><br/>  
+	  	<input type="button" name="takePhoto" value="takePhoto" onClick="takePhoto()"/>
+	  	<br/>		
+		<img id="cameraImg" width="350" height="175"/>
+		<input type="button" name="getDeviceInfo" value="Device Info" onClick="getDeviceInfo()"/>
+		<div id="deviceInfo">
+		</div>
+		
+		<input type="button" name="getAlbum" value="Album Images" onClick="getAlbum()"/>
+		<br/>
+		
+		<input type="button" name="share" value="Share Content" onClick="shareContent()"/>
+		
+	
+	</body>
+</html>

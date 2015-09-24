@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv = "Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../css/aa.css">
+<script language="javascript" type="text/javascript">
+
+document.write(' old:'+localStorage.lastname);
+localStorage.lastname="Smith";
+document.write(' new:'+localStorage.lastname);
+
+        function shareContentClickHandler(platformID)
+        {
+            var params = '{ "title" : "测试的标题", "titleUrl" : "http://m.yhd.com/item/10220109", "text" : "测试的文字", "imageUrl" : "http://d6.yihaodianimg.com/N00/M07/3C/54/CgQCtlLNDqSATYCKAAMUJXYpdCc98401_142x142.jpg", "url" : "http://m.yhd.com/item/10220109" }';
+            
+            window.vdian.shareContent(platformID,params);
+        }
+        
+        function testSetToken()
+        {
+        	vdian.setToken();
+            location.href='test.html';        
+        }
+        
+        function toNative(nativeName)
+        {
+            var from = window.location.href;
+            var params = '{ "nativeName" : "'+nativeName+'", "shoppingBizType" : "FAST_VDIAN_MOBILE" }';
+            
+            window.vdian.toNative(from, params);
+        }
+        
+        function toNativeShopCartActivity()
+        {
+            var from = window.location.href;
+            var params = '{ "nativeName" : "ShopCartActivity" }';
+            
+            window.vdian.toNative(from, params);
+        }
+        
+        //221799425589
+        function toNativeOrderCreateActivity(orderCode)
+        {
+            var from = window.location.href;
+            var params = '{ "nativeName" : "OrderCreateActivity", "orderCode" : "'+orderCode+'" }';
+            
+            window.vdian.toNative(from, params);
+        }
+        
+        // 跳转android native订单详情界面
+        function toNativeOrderDetailActivity(orderCode)
+        {
+            var from = window.location.href;
+            var params = '{ "nativeName" : "OrderDetailActivity", "orderCode" : "'+orderCode+'" }';
+            
+            window.vdian.toNative(from, params);
+        }
+        
+        function goBack()
+        {
+        	vdian.gobackFromJSNavigation();
+        	window.history.back(-1);
+        }
+        
+        function setPush(){
+        	vdian.setIsPushing(true);
+        	vdian.setPushStartEndTime('9','23');
+        }
+
+</script>
+</head>
+<style> 
+ .black_overlay{  
+ display: none;
+ position: absolute;
+ top: 0%;  left: 0%;
+ width: 100%;
+ height: 100%;
+  background-color:gray;
+ z-index:1001;
+ -moz-opacity: 0.8;
+ opacity:.80;
+ filter: alpha(opacity=80);
+ }  
+ .white_content {
+ display: none;  
+ position: absolute;  
+ top: 50%;  left: 0%;  
+ width: 100%;  height: 50%; ;  
+ background-color: #F8F8F8;  
+ z-index:1002;  
+ overflow: auto;
+}  
+
+
+
+
+.bd-share-pop-content p, .bd-share-pop-content ul, .bd-share-pop-content li, .bd-share-pop-content table, .bd-share-pop-content thead, .bd-share-pop-content tbody, .bd-share-pop-content tr, .bd-share-pop-content td, .bd-share-pop-content th {
+    margin: 0;
+    padding: 0;
+}
+.bd-share-popup a, .bd-share-popup a:hover {
+    outline: medium none;
+    text-decoration: none;
+}
+.bd-share-popup, .bd-share-popup li {
+    list-style: none outside none;
+}
+.bd-share .bd-cl {
+    display: inline-block;
+}
+.bd-share .bd-cl:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.bd-share {
+    display: inline-block;
+    margin: 2px auto 0;
+    padding: 10px 0;
+    text-align: center;
+}
+.bd-share .media {
+    display: inline-block;
+    float: left;
+    height: 63px;
+    padding: 17px 5px 0;
+    width: 60px;
+}
+.bd-share .media a, .bd-share-popup-header h3 {
+    background-image: url("http://openapi.baidu.com/static/07081126/social-api/img/share/share_popupx.png");
+    background-repeat: no-repeat;
+}
+@media not all, not all, (min--moz-device-pixel-ratio: 2), not all {
+.bd-share .media a, .bd-share-popup-header h3 {
+    background-image: url("http://openapi.baidu.com/static/07081126/social-api/img/share/share_popup2x.png");
+    background-size: 437px 217px;
+}
+}
+.bd-share .media a {
+    color: #111;
+    display: block;
+    font-size: 13px;
+    height: 25px;
+    padding-top: 38px;
+    text-align: center;
+}
+.bd-share .media .renren {
+    background-position: -380px 4px;
+}
+.bd-share .media .sinaweibo {
+    background-position: 19px 0;
+}
+.bd-share .media .qqweibo {
+    background-position: -181px 0;
+}
+.bd-share .media .kaixin {
+    background-position: -181px -100px;
+}
+.bd-share .media .qqdenglu {
+    background-position: -81px 0;
+}
+.bd-share .media .sms {
+    background-position: -81px -100px;
+}
+.bd-share .media .mail {
+    background-position: -281px -100px;
+}
+.bd-share-popup-layer {
+    background-color: black;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+}
+.bd-share-pop-content {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100001;
+}
+.bd-share-pop-content table, .bd-share-pop-content tr, .bd-share-pop-content td {
+    height: 100%;
+    width: 100%;
+}
+.bd-share-popup {
+    background: none repeat scroll 0 0 #f6f6f6;
+    box-shadow: 2px 2px 4px #333, -2px -2px 4px #333;
+    display: inline-block;
+}
+.bd-share-pop-content td {
+    text-align: center;
+    vertical-align: middle;
+}
+.native .bd-share-popup {
+    display: inline-block;
+    width: 100%;
+}
+.native td {
+    text-align: center;
+    vertical-align: bottom;
+}
+.bd-share-popup-header {
+    background: -moz-linear-gradient(center top , #ffffff, #eaeaea) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #d9d8d8;
+    box-shadow: 0 2px 3px #999;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 13px;
+}
+.bd-share-popup-header h3 {
+    background-position: 0 -189px;
+    background-repeat: no-repeat;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 0 29px;
+    text-align: left;
+}
+.bd-share-popup-footer {
+    background-color: #f6f6f6;
+    border-top: 1px solid #d9d8d8;
+    padding: 6px 4px 14px;
+}
+.bd-share-popup-close {
+    background: -moz-linear-gradient(center top , #ffffff, #eaeaea) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #c5c5c5;
+    border-radius: 2px;
+    color: #666;
+    display: block;
+    font-size: 15px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+}
+
+
+
+</style> 
+
+
+<body>
+
+<div style="font-size: 20px;">
+<br />
+<a href="javascript:void(0)" onclick="javascript:goBack();"><返回</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="window.location.href='file:///android_asset/test.html'">H5Test1</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="window.location.href='http://vd.yhd.com/myvdian/appindex.do'">App首页</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="javascript:toNative('ShopCartActivity');">购物车</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="javascript:toNative('ShopCartNoneActivity');">空购物车</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="javascript:toNative('OrderActivity');">结算页</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="javascript:toNativeOrderCreateActivity('221799425589');">订单创建完成</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="javascript:vdian.address();">我的地址</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="javascript:vdian.addressList();">我的地址列表</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="javascript:toNativeOrderDetailActivity('221857785589');">订单详情</a>
+<br /><br/>
+<a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';
+        document.getElementById('fade').style.display='block'">分  享</a>
+<br/><br/>
+<a href="javascript:void(0)" onclick="window.location.href='test.html'">拍  照</a>
+<br/><br/>
+<a href="javascript:void(0)" onclick="window.location.href='http://192.168.112.94:3000/myshop/pages/preview/devidedMarketProducts'">前端H5测试</a>
+<br/><br/>
+<a class="undefined" href="javascript:vdian.tel('4000071111');"><em>客服热线</em>  <span>400-007-1111</span>  </a>
+<br/><br/>
+<a class="undefined" href="javascript:vdian.checkUpdate();">检查升级</a>
+<br/><br/>
+<a class="undefined" href="javascript:testSetToken();">注册token</a>
+<br/><br/>
+<a class="undefined" href="javascript:vdian.goToMarket();">去应用市场评分</a>
+<br/><br/>
+<a class="undefined" href="javascript:setPush();">消息设置</a>
+<br/><br/>
+<a class="undefined" href="javascript:vdian.shareMsg(0);">分享到微信会话</a>
+<br/><br/>
+<a class="undefined" href="javascript:vdian.shareMsg(1);">分享到微信朋友圈</a>
+<br/><br/>
+<a class="undefined" href="javascript:vdian.openInNewWindow('http://vd.yhd.com/detail/detailIndex.do?vDPmInfoId=162631&yhdPmInfoId=20949774&vDMerchantId=18897');">新窗口中打开</a>
+<br/><br/>
+v1.5.1
+</div>
+
+<!--弹出层-->
+<div id="light" style="text-align:center;" class="white_content"> 
+<div class="bd-share">
+<ul id="bd_share_mediaes" class="bd-cl" style="width:320px;">
+<li class="media">
+<a id="bd_share_mediaes_sms" class="sms" href="#" onClick="shareContentClickHandler('Clipboard')">复制链接</a>
+</li>
+<li class="media">
+<a id="bd_share_mediaes_mail" class="mail" href="#">预览</a>
+</li>
+<li class="media">
+<a id="bd_share_mediaes_wechat" class="qqweibo" href="#" onClick="shareContentClickHandler('Wechat')">微信</a>
+</li>
+<li class="media">
+<a id="bd_share_mediaes_renren" class="renren" href="#" onClick="shareContentClickHandler('WechatMoments')">朋友圈</a>
+</li>
+<li class="media">
+<a id="bd_share_mediaes_qqdenglu" class="qqdenglu" href="#" onClick="shareContentClickHandler('QZone')">QQ空间</a>
+</li>
+<li class="media">
+<a id="bd_share_mediaes_kaixin" class="kaixin" href="#" onClick="shareContentClickHandler('QQ')">QQ</a>
+</li>
+<li class="media">
+<a id="bd_share_mediaes_sinaweibo" class="sinaweibo" href="#" onClick="shareContentClickHandler('SinaWeibo')">新浪微博</a>
+</li>
+</ul>
+</div>
+
+<div class="bd-share-popup-footer" onclick="document.getElementById('light').style.display='none';
+        document.getElementById('fade').style.display='none'">
+    <a href="javascript:void(0)">取  消</a>
+</div> 
+
+</div>
+</div> 
+      
+ <div id="fade" class="black_overlay"> </div>
+</body>
+
+</html>
+
+

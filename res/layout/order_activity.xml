@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shopcart_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+		<ScrollView 
+		    android:id="@+id/order_scroll_view"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:fadingEdge="vertical"
+		    android:fillViewport="true"
+		    android:scrollbars="vertical" >
+		
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		
+		        <!-- 收获地址 -->
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@color/bai_se"
+		            android:orientation="vertical" >
+		
+		            <RelativeLayout
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content" >
+		
+		                <!-- 收货地址头部 -->
+		
+		                <TextView
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginLeft="5dp"
+		                    android:drawableLeft="@drawable/label_address"
+		                    android:drawablePadding="4dp"
+		                    android:gravity="center_vertical"
+		                    android:paddingTop="16dp"
+		                    android:singleLine="true"
+		                    android:text="收货地址"
+		                    android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		                <!-- 我的地址保存按钮 -->
+		
+		                <TextView
+		                    android:id="@+id/oa_address_save"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_alignParentRight="true"
+		                    android:gravity="center_vertical"
+		                    android:layout_marginRight="16dp"
+		                    android:paddingTop="16dp"
+		                    android:singleLine="true"
+		                    android:text="保存"
+		                    android:textColor="@color/yhd_red"
+		                    android:textSize="16sp"
+		                    android:textStyle="bold"
+		                    android:visibility="invisible" />
+		            </RelativeLayout>
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 收货地址 content -->
+		
+		            <LinearLayout
+		                android:id="@+id/order_address"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal" />
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		        </LinearLayout>
+		
+		        <View
+		            android:layout_width="fill_parent"
+		            android:layout_height="16dp"
+		            android:background="@null" />
+		        
+		        <!-- 抵用券 -->
+		        <LinearLayout
+		            android:id="@+id/oa_coupon_layout"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@color/bai_se"
+		            android:orientation="vertical" 
+		            android:visibility="gone">
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:background="@color/liang_hui_se" />
+				        
+		
+		            <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="5dip"
+		                android:drawableLeft="@drawable/label_coupon"
+		                android:drawablePadding="4dp"
+		                android:gravity="center_vertical"
+		                android:singleLine="true"
+		                android:text="抵用券"
+		                android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+				           		
+		            <RelativeLayout
+		                android:id="@+id/oa_coupon"
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@null"
+		                android:gravity="center_vertical"
+		                 android:layout_marginTop="16dp"
+		                   android:layout_marginBottom="16dp">
+
+		                <TextView
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"		                  
+		                    android:layout_marginLeft="5dp"		              
+		                    android:text="抵用券" />
+		                
+		                
+		                <LinearLayout 
+		                     android:layout_width="wrap_content"
+		                	 android:layout_height="wrap_content"
+		                	 android:layout_alignParentRight="true"		                	
+		                     android:layout_marginRight="18dp">
+		                     
+		                     <TextView 
+		                      android:id="@+id/oa_coupon_amount"
+		                      android:layout_width="wrap_content"
+		                	  android:layout_height="wrap_content"			                             	 
+		                	  android:text=""	
+		                	  android:textColor="@color/yhd_red"		                   
+		               		 />
+
+		                	<TextView 
+		                      android:id="@+id/oa_coupon_num"
+		                      android:layout_width="wrap_content"
+		                	  android:layout_height="wrap_content"		                	 
+		                	  android:text=""
+		                	 
+		                     />
+		                	<TextView 		                 
+		                      android:layout_width="wrap_content"
+		                	  android:layout_height="wrap_content"		                	 
+		                	  android:text=""
+		                	  android:drawableRight="@drawable/index_right_arrow"
+		                      android:drawablePadding="4dp"		                	 
+		                     />
+		                    
+		                </LinearLayout>
+		                
+		            </RelativeLayout>
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:background="@color/liang_hui_se" />
+		        </LinearLayout>
+		        
+		         <View
+		            android:id="@+id/oa_coupon_line"
+		            android:layout_width="fill_parent"
+		            android:layout_height="16dp"
+		            android:background="@null" 
+		            android:visibility="gone"/>
+		
+		        <!-- 支付方式 -->
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@color/bai_se"
+		            android:orientation="vertical" >
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 支付方式 -->
+		
+		            <TextView
+		                android:id="@+id/nick_name"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="5dip"
+		                android:drawableLeft="@drawable/label_pay"
+		                android:drawablePadding="4dp"
+		                android:gravity="center_vertical"
+		                android:singleLine="true"
+		                android:text="支付方式"
+		                android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 选择支付方式 -->
+		
+		            <com.thestore.microstore.widget.ListViewForScrollView
+		                android:id="@+id/oa_payments"
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:background="@null"
+		                android:listSelector="@anim/shape_rounded_selectable"/>
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:background="@color/liang_hui_se" />
+		        </LinearLayout>
+		
+		        <View
+		            android:layout_width="fill_parent"
+		            android:layout_height="16dp"
+		            android:background="@null" />
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@color/bai_se"
+		            android:orientation="vertical" >
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 发票信息 -->
+		
+		            <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="5dip"
+		                android:drawableLeft="@drawable/label_invoice"
+		                android:drawablePadding="4dp"
+		                android:gravity="center_vertical"
+		                android:singleLine="true"
+		                android:text="发票信息"
+		                android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <RelativeLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content" >
+		
+		                <!-- 是否需要发票 -->
+		
+		                <TextView
+		                    android:id="@+id/oa_is_need_invoice_text"
+		                    android:layout_width="80dp"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginLeft="5dp"
+		                    android:gravity="left"
+		                    android:text="不需要发票"
+		                    android:textSize="16sp" />
+		
+		                <!-- 是否需要发票 -->
+		
+		                <com.thestore.microstore.widget.UISwitchButton
+		                    xmlns:switch="http://schemas.android.com/apk/res-auto"
+		                    android:id="@+id/oa_is_need_invoice"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:layout_alignParentRight="true"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginRight="16dp"
+		                    android:checked="false"
+		                    switch:bmHeight="1000dp"
+		                    switch:bmWidth="70dp" />
+		            </RelativeLayout>
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <LinearLayout
+		                android:id="@+id/oa_invoice_layout"
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@color/danfen_bai_se"
+		                android:orientation="vertical"
+		                android:paddingLeft="5dp"
+		                android:paddingRight="16dp"
+		                android:paddingTop="16dp"
+		                android:visibility="gone" >
+		
+		                <LinearLayout
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:focusable="true"
+		                    android:focusableInTouchMode="true"
+		                    android:orientation="horizontal" >
+		
+		                    <!-- 发票类型 -->
+		
+		                    <Spinner
+		                        android:id="@+id/oa_invoice_type"
+		                        android:layout_width="0dp"
+		                        android:layout_height="wrap_content"
+		                        android:layout_weight="2"
+		                        android:background="@anim/spinner_bg_up_down_selector"
+		                        android:gravity="center"
+		                        android:paddingBottom="12dp"
+		                        android:paddingTop="12dp"
+		                        android:text="@string/province_label" />
+		
+		                    <!-- 此处设置margin失效，先用view顶替 -->
+		
+		                    <View
+		                        android:layout_width="16dp"
+		                        android:layout_height="16dp"
+		                        android:background="@null" />
+		
+		                    <!-- 请输入发票抬头 -->
+		
+		                    <EditText
+		                        android:id="@+id/oa_invoice_title"
+		                        android:layout_width="0dp"
+		                        android:layout_height="wrap_content"
+		                        android:layout_weight="3"
+		                        android:background="@anim/text_shape"
+		                        android:gravity="left"
+		                        android:hint="请输入发票抬头"
+		                        android:inputType="text"
+		                        android:paddingLeft="12dp"
+		                        android:paddingTop="12dp"
+		                        android:paddingRight="12dp"
+		                        android:paddingBottom="12dp"
+		                        android:text=""
+		                        android:textSize="16sp"
+		                        android:maxLength="40"
+		                        android:visibility="invisible" />
+		                </LinearLayout>
+		
+		                <!-- 选择发票内容 -->
+		
+		                <Spinner
+		                    android:id="@+id/oa_invoice_content"
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginBottom="16dp"
+		                    android:layout_marginTop="16dp"
+		                    android:background="@anim/spinner_large_up_down_selector"
+		                    android:gravity="center"
+		                    android:text="@string/province_label" />
+		
+		                <!-- 温馨提示 -->
+		
+		                <TextView
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginTop="16dp"		                    
+		                    android:background="@null"
+		                    android:text="温馨提示："
+		                    android:textSize="16sp" />
+		                <TextView
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:background="@null"
+		                    android:text="1、商城商品发票内容由商家决定，如有特殊要求，请联系商家客服，不要写在备注中；"
+		                    android:textSize="14sp" />
+		                <TextView
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:background="@null"
+		                    android:text="2、数码、手机、家电类商品，将根据商品的全称和型号开具发票内容；"
+		                    android:textSize="14sp" />
+		                <TextView
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:background="@null"
+		                    android:text="3、发票金额为现金支付金额（扣除抵用券金额）。"
+		                    android:textSize="14sp" />
+		            </LinearLayout>
+		        </LinearLayout>
+		
+		        <View
+		            android:layout_width="fill_parent"
+		            android:layout_height="16dp"
+		            android:background="@null" />
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@color/bai_se"
+		            android:orientation="vertical" >
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 商品清单 -->
+		
+		            <TextView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="5dp"
+		                android:layout_marginBottom="16dp"
+		                android:drawableLeft="@drawable/label_pro_bill"
+		                android:drawablePadding="4dp"
+		                android:gravity="center_vertical"
+		                android:singleLine="true"
+		                android:text="商品清单"
+		                android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		            <!-- 包裹详细 -->
+		
+		            <LinearLayout
+		                android:id="@+id/order_pro_package_layout"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:orientation="vertical" >
+		            </LinearLayout>
+		        </LinearLayout>
+		
+		        <View
+		            android:layout_width="fill_parent"
+		            android:layout_height="16dp"
+		            android:background="@null" />
+		
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@color/bai_se"
+		            android:focusable="true"
+		            android:focusableInTouchMode="true"
+		            android:orientation="vertical" >
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 更多信息备注 -->
+		
+		            <TextView		               
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="5dip"
+		                android:drawableLeft="@drawable/label_more"
+		                android:drawablePadding="4dp"
+		                android:gravity="center_vertical"
+		                android:singleLine="true"
+		                android:text="更多信息备注"
+		                android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 微信号 -->
+		
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal" >
+		
+		                <TextView
+		                    android:layout_width="80dp"
+		                    android:layout_height="wrap_content"
+		                    android:gravity="left"
+		                    android:paddingLeft="5dip"
+		                    android:text="微信号"
+		                    android:textColor="@color/gray_111111"
+		                    android:textSize="16sp" />
+		
+		                <EditText
+		                    android:id="@+id/oa_weixinno"
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginRight="16dp"
+		                    android:background="@null"
+		                    android:hint="可选填"
+		                    android:inputType="text"
+		                    android:maxLength="20"
+		                    android:text=""
+		                    android:textSize="16sp" />
+		            </LinearLayout>
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginBottom="16dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		
+		            <!-- 留言 -->
+		
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:orientation="horizontal"
+		                android:layout_marginBottom="70dp" >
+		
+		                <TextView
+		                    android:layout_width="80dp"
+		                    android:layout_height="wrap_content"
+		                    android:gravity="left"
+		                    android:paddingLeft="5dip"
+		                    android:text="留言"
+		                    android:textColor="@color/gray_111111"
+		                    android:textSize="16sp" />
+		
+		                <EditText
+		                    android:id="@+id/oa_msg"
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_marginRight="16dp"
+		                    android:background="@null"
+		                    android:hint="可选填"
+		                    android:inputType="text"
+		                    android:maxLength="100"
+		                    android:text=""
+		                    android:textSize="16sp" />
+		            </LinearLayout>
+		
+		            <View
+		                android:layout_width="fill_parent"
+		                android:layout_height="1dp"
+		                android:layout_marginTop="16dp"
+		                android:background="@color/liang_hui_se" />
+		        </LinearLayout>
+		
+		    </LinearLayout>
+		
+		</ScrollView>
+
+        <!-- 总计 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_bottom_background"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="商品金额"
+                        android:textColor="@color/gray_111111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/oa_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/yhd_red"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="运费"
+                        android:textColor="@color/gray_111111"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/oa_tran_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/yhd_red"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="共需支付"
+                    android:textColor="@color/gray_111111"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/oa_need_pay"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/yhd_red"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/oa_sub_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@anim/button_yhd_red_selector"
+                    android:gravity="center_vertical"
+                    android:text="提交订单"
+                    android:textColor="@color/bai_se"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

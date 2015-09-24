@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- 下拉框属性 -->
+    <dimen name="spinner_text_size">16dp</dimen>
+    <dimen name="spinner_width">180dp</dimen>
+    <dimen name="spinner_top">0dp</dimen>
+    <dimen name="spinner_bottom">0dp</dimen>
+    
+
+    <!-- 购物车 -->
+    <dimen name="cart_spacing">8dp</dimen>
+    <dimen name="cart_cb_size">24dp</dimen>
+    <dimen name="cart_font_size">16dp</dimen>
+    
+
+</resources>

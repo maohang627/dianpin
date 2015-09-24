@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bai_se"
+    android:orientation="vertical" >
+
+    <!-- oaia 是当前文件的名称首字母组合，用来标识id的 -->
+
+
+    <!-- 收货人姓名 -->
+
+    <EditText
+        android:id="@+id/oaia_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@null"
+        android:hint="收货人姓名"
+        android:inputType="text"
+        android:maxLength="20"
+        android:text=""
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 联系电话 -->
+
+    <EditText
+        android:id="@+id/oaia_tel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@null"
+        android:hint="联系电话"
+        android:inputType="number"
+        android:maxLength="11"
+        android:text=""
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 收货地址 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="收货地址"
+            android:text=""
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:orientation="vertical" >
+
+            <!-- 省份 -->
+
+            <Spinner
+                android:id="@+id/oaia_address_province"
+                android:layout_width="@dimen/spinner_width"
+                android:layout_height="wrap_content"
+                android:background="@anim/spinner_bg_up_down_selector"
+                android:gravity="center"
+                android:text="@string/province_label" />
+
+            <!-- 城市 -->
+
+            <Spinner
+                android:id="@+id/oaia_address_city"
+                android:layout_width="@dimen/spinner_width"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@anim/spinner_bg_up_down_selector"
+                android:gravity="center"
+                android:text="@string/city_label" />
+
+            <!-- 地区 -->
+
+            <Spinner
+                android:id="@+id/oaia_address_area"
+                android:layout_width="@dimen/spinner_width"
+                android:layout_height="wrap_content"
+                android:background="@anim/spinner_bg_up_down_selector"
+                android:gravity="center"
+                android:text="@string/area_label" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 详细地址 -->
+
+    <EditText
+        android:id="@+id/oaia_detail_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@null"
+        android:hint="详细地址"
+        android:inputType="text"
+        android:maxLength="100"
+        android:text=""
+        android:textSize="16sp" />
+
+</LinearLayout>

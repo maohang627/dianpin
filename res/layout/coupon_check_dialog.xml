@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/coupon_tanchuang"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="@string/coupon_check_msg" />
+
+    <TextView
+        android:id="@+id/ccd_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="@string/coupon_check_code_send" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp" >
+
+        <EditText
+            android:id="@+id/ccd_check_code"
+            android:layout_width="140dp"
+            android:layout_height="45dp"           
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="2dp"
+            android:ems="6"
+            android:gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:singleLine="true" 
+            android:background="@null">
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ccd_check_code_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="重新获取验证码"
+                android:textColor="@color/gray_B8B8B8"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/ccd_check_code_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="(60S)"
+                android:textColor="@color/gray_B8B8B8" 
+                android:clickable="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp" >
+
+        <TextView
+            android:id="@+id/ccd_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="65dp"
+            android:padding="5dp"
+            android:text="确定" />
+
+        <TextView
+            android:id="@+id/ccd_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="62dp"
+            android:padding="5dp"
+            android:text="取消" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Webview界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+
+    <!-- <include layout="@layout/common_title" /> -->
+
+    <ProgressBar
+        android:id="@+id/webview_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:progressDrawable="@drawable/progress_red" />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+    
+    <RelativeLayout
+	    android:id="@+id/web_error"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/error_net"
+	    android:visibility="gone" >    
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/web_controller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/web_controller_diviver"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray_111111" />
+
+        <ImageButton
+            android:id="@+id/web_pre_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/share_bottom_left_btn_selector" />
+
+        <ImageButton
+            android:id="@+id/web_next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/web_pre_btn"
+            android:background="@drawable/share_bottom_right_btn_selector" />
+
+        <ImageButton
+            android:id="@+id/web_refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/web_next_btn"
+            android:background="@drawable/share_bottom_refresh_btn_selector" />
+
+        <Button
+            android:id="@+id/web_home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/share_bottom_share_btn_selector"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="回首页"
+            android:textColor="@color/coffee" />
+    </RelativeLayout>
+
+</LinearLayout>

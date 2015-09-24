@@ -1,0 +1,67 @@
+<resources>
+    
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <style name="mSrollView" >
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_handle_vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="Default" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleSize">50.0dip</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+
+    <style name="style_14_4B4B4B">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff4b4b4b</item>
+    </style>
+
+    <style name="style_14_A10D0B">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffa10d0b</item>
+    </style>
+
+    <style name="style_15_EBEBEB_BOLD">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffebebeb</item>
+    </style>
+
+    <style name="style_17_FFFFFF_BOLD">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="style_18_BEBEBE_BOLD">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="style_18_A10D0B_BOLD">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffa10d0b</item>
+    </style>
+
+    <style name="style_18_000000_BOLD">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    
+   
+	<style name="dialog" parent="@android:style/Theme.Dialog">				
+		<item name="android:windowNoTitle">true</item>		
+	</style>
+
+
+</resources>

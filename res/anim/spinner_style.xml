@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 渐变的颜色 -->
+    <gradient
+        android:angle="0.0"
+        android:centerColor="#ffffffff"
+        android:endColor="#ffffffff"
+        android:startColor="#ffffffff" />
+
+    <!-- 描边 -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/liang_hui_se" />
+	
+    <!-- 定义间距 -->
+    <padding  
+        android:top="@dimen/spinner_top"
+        android:bottom="@dimen/spinner_bottom"
+        />
+    <!-- 设置圆角 -->
+    <corners
+        android:bottomLeftRadius="38dip"
+        android:bottomRightRadius="38dip"
+        android:topLeftRadius="38dip"
+        android:topRightRadius="38dip" />
+
+</shape>

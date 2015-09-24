@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="20dp"
+    android:background="@color/bai_se"
+    android:orientation="vertical" >
+
+    <!-- odcca 是文件名首字母组合 用来标识id所属 -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 订单编号 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="订单编号"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odcca_orderno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1212123123asdf123"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 下单时间 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="下单时间"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odcca_createtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2012-19-18 20:10:12"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 收货地址 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="收货地址"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 收货人姓名 -->
+
+            <TextView
+                android:id="@+id/odcca_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="小恶魔"
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <!-- 收货人省份 -->
+
+            <TextView
+                android:id="@+id/odcca_province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="上海市静安区"
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <!-- 收货人地址 -->
+
+            <TextView
+                android:id="@+id/odcca_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="收货地址"
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <!-- 收货人电话 -->
+
+            <TextView
+                android:id="@+id/odcca_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="收货地址"
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 包裹数 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30sp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="下单时间"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/odna_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="3个"
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/odna_count_has"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="(含20个商品)"
+                android:textColor="@color/liang_hui_se"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 货到付款 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp" >
+
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="货到付款"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/odcca_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="货到付现金"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginTop="16sp"
+        android:background="@color/liang_hui_se" />
+    
+    
+</LinearLayout>

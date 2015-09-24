@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/oasa_address_show_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="5dp" >
+
+    <!-- oasa 是当前文件的名称首字母组合，用来标识字段 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/oasa_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="小恶魔"
+            android:textColor="@color/gray_111111"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/oasa_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="上海市 静安区"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/oasa_address_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="陕西北路816号静安风景2幢1102室"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/oasa_tel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="1356445061"
+            android:textColor="@color/gray_111111"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/oasa_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="16sp"
+            android:src="@drawable/index_right_arrow" />
+    </LinearLayout>
+
+</RelativeLayout>

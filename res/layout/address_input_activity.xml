@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <!-- aia 是该文件的首字母组合 用来标志变量 -->
+    
+    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/bai_se"
+	        android:orientation="vertical" >
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="16dp"
+        android:background="@color/qian_hui_se" />
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 收货人姓名 -->
+
+    <EditText
+        android:id="@+id/address_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:hint="收货人姓名"
+        android:inputType="text"
+        android:text=""
+        android:textSize="16sp"
+        android:maxLength="20" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 手机号码 -->
+
+    <EditText
+        android:id="@+id/address_tel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@null"
+        android:hint="手机号码"
+        android:inputType="number"
+        android:text=""
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 收货地址 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:hint="收货地址"
+            android:text=""
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 省份 -->
+
+            <Spinner
+                android:id="@+id/address_province_spinner"
+                android:layout_width="@dimen/spinner_width"
+                android:layout_height="wrap_content"
+                android:background="@anim/spinner_bg_up_down_selector"
+                android:gravity="center"
+                android:text="@string/province_label" />
+
+            <!-- 城市 -->
+
+            <Spinner
+                android:id="@+id/address_city_spinner"
+                android:layout_width="@dimen/spinner_width"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@anim/spinner_bg_up_down_selector"
+                android:gravity="center"
+                android:text="@string/city_label" />
+
+            <!-- 地区 -->
+
+            <Spinner
+                android:id="@+id/address_area_spinner"
+                android:layout_width="@dimen/spinner_width"
+                android:layout_height="wrap_content"
+                android:background="@anim/spinner_bg_up_down_selector"
+                android:gravity="center"
+                android:text="@string/area_label" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 详细地址 -->
+
+    <EditText
+        android:id="@+id/address_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@null"
+        android:hint="详细地址"
+        android:inputType="text"
+        android:text=""
+        android:textSize="16sp"
+        android:maxLength="50" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/liang_hui_se" />
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="16dp"
+        android:background="@color/qian_hui_se" />
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/liang_hui_se" />
+
+    <!-- 是否默认 -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="是否设为常用地址"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <com.thestore.microstore.widget.UISwitchButton
+            xmlns:switch="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/address_is_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:checked="false"
+            switch:bmHeight="500dp"
+            switch:bmWidth="70dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/liang_hui_se" />
+    
+    </LinearLayout>
+
+    <!-- 保存 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/aia_save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_baocundizhi"
+            android:gravity="center"
+            android:text="" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

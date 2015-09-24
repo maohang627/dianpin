@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 纯白色 -->
+    <color name="bai_se">#FFFFFF</color>
+    
+    <!-- 浅灰色 -->
+    <color name="qian_hui_se">#F7F7F7</color>
+    
+    <!-- 亮灰色 -->
+    <color name="liang_hui_se">#D8D8D8</color>
+    
+    <!-- 深灰色 -->
+    <color name="shen_hui_se">#A8A8A8</color>
+
+    <!-- 暗黄色 -->
+    <color name="an_huang_se">#F39800</color>
+
+    <!-- 1号店经典红色 -->
+    <color name="yhd_red">#FF0000</color>
+
+    <!-- 1号店经典深红色 -->
+    <color name="yhd_shen_red">#EE0000</color>
+
+    <!-- 粉白色 -->
+    <color name="fen_bai_se">#FFFCF7</color>
+    
+    <!-- 天蓝色 -->
+    <color name="azure">#6098FF</color>
+    
+    <!-- 酱黄色 -->
+    <color name="jiang_huang_se">#F39800</color>
+    
+    
+    <!-- 纯黑色 -->
+    <color name="hei_se">#000000</color>
+    
+    <!-- 淡粉白色 -->
+    <color name="danfen_bai_se">#FFFCF7</color>
+    
+    
+    <!-- 蓝色 -->
+    <color name="blue">#4892FB</color>
+    
+    
+    
+    
+    <color name="gray_111111">#111111</color>
+    <color name="gray_222222">#222222</color>
+    <color name="gray_333333">#333333</color>
+    <color name="gray_444444">#444444</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_777777">#777777</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_cccccc">#cccccc</color>
+    <color name="gray_dedede">#dedede</color>
+    <color name="gray_eeeeee">#eeeeee</color>
+    <color name="gray_f5f5f5">#f5f5f5</color>
+    <color name="gray_e8e7e5">#e8e7e5</color>
+    <color name="gray_a1b9b9b9">#a1b9b9b9</color>
+    <color name="coffee">#9b827d</color>
+    <color name="gray">#999999</color>
+    <color name="gray_B8B8B8">#B8B8B8</color>
+
+</resources>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_detail_scroll_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="vertical"
+    android:fillViewport="true"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 文字描述 -->
+
+        <TextView
+            android:id="@+id/oca_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="16sp"
+            android:background="@null"
+            android:paddingBottom="16sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="16sp"
+            android:text=""
+            android:textColor="@color/jiang_huang_se"
+            android:textSize="16sp" />
+
+        <!-- 订单详情 -->
+
+        <RelativeLayout
+            android:id="@+id/oca_order_detail_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="16sp"
+            android:background="@color/bai_se"
+            android:orientation="horizontal"
+            android:paddingBottom="16sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="16sp" >
+
+            <!-- 订单编号 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="订单编号："
+                        android:textColor="@color/gray_111111"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/oca_orderCode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray_111111"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- 包裹数 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="包裹数："
+                        android:textColor="@color/gray_111111"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/oca_childNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray_111111"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- 商品数 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="商品数："
+                        android:textColor="@color/gray_111111"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/oca_productCount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/gray_111111"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- 金额 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="金额："
+                        android:textColor="@color/gray_111111"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/oca_orderAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/yhd_red"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/index_right_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="16sp"
+            android:background="@color/bai_se"
+            android:paddingBottom="16sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="16sp" >
+
+            <!-- 在线支付 -->
+
+            <TextView
+                android:id="@+id/oca_online_pay_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="在线支付"
+                android:textColor="@color/gray_111111"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/oca_online_pay"
+                android:layout_width="@dimen/spinner_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:layout_centerVertical="true"
+                android:background="@anim/spinner_bg_up_down_selector"
+                android:gravity="center"
+                android:text="" />
+        </RelativeLayout>
+
+        <!-- 立即支付 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30sp"
+            android:layout_marginTop="16sp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/pay_immediately_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_lijizhifu"
+                android:gravity="top"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

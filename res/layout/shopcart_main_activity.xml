@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shopcart_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scroll_view_default"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        
+        <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
+        
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	
+	        <!-- 购物车列表展现 >> 正常商品 -->	
+	        <com.thestore.microstore.widget.ListViewForScrollView
+	            android:id="@+id/shopcart_default_list"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:cacheColorHint="#00000000"
+	            android:footerDividersEnabled="false"
+	            android:headerDividersEnabled="true"
+	            android:listSelector="@anim/shape_rounded_selectable" />
+	        
+	        <!-- 我也要开店 -->
+	        <TextView
+	            android:id="@+id/shopcart_will_open_default"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginBottom="40dp"
+	            android:gravity="center"
+	            android:textColor="@color/azure"
+	            android:text=""
+	            android:visibility="invisible" >
+	        </TextView>
+	        
+	    </LinearLayout>
+		
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
+		    <!-- 说明 -->	
+			<TextView
+			    android:id="@+id/shopcart_overdue_text"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="8dp"
+			    android:layout_marginBottom="8dp"
+			    android:gravity="center"
+			    android:text="以下商品已失效或当前地区不可销售"
+			    android:visibility="invisible" />
+	
+	        <!-- 购物车列表展现 >> 过期商品 -->	
+	        <com.thestore.microstore.widget.ListViewForScrollView
+	            android:id="@+id/shopcart_overdue_list"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:cacheColorHint="#00000000"
+	            android:footerDividersEnabled="false"
+	            android:headerDividersEnabled="true"
+	            android:listSelector="@anim/shape_rounded_selectable" />
+	        
+		    <!-- 我也要开店 -->
+	        <TextView
+	            android:id="@+id/shopcart_will_open_overdue"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="8dp"
+	            android:layout_marginBottom="70dp"
+	            android:gravity="center"
+	            android:textColor="@color/azure"
+	            android:text=""
+	            android:visibility="invisible" >
+	        </TextView>
+        
+	    </LinearLayout>
+	    
+	    </LinearLayout>
+	        
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/recLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:background="@color/qian_hui_se">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 一条红线 -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/yhd_red" />
+    </LinearLayout>
+
+    <!-- 底部内容 -->
+    <LinearLayout
+        android:id="@+id/shopcart_product_buttom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dip"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/shopcart_totalprice_desc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shopcart_totalprice_label" />
+
+            <TextView
+                android:id="@+id/shopcart_totalprice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="￥"
+                android:textColor="@color/yhd_red" />
+        </LinearLayout>
+        
+       	<!-- 去结算 -->
+        <TextView
+            android:id="@+id/shopcart_bottom_toPay_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@anim/button_yhd_red_selector"
+            android:gravity="center_vertical"
+            android:text="去结算"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textColor="@color/bai_se"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+    </LinearLayout>
+
+</RelativeLayout>
