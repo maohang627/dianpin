@@ -39,7 +39,7 @@
     <application
         android:name="com.thestore.microstore.VDApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/dianpin_logo"
         android:label="@string/app_name"
         android:theme="@style/Default" >
         
@@ -48,34 +48,17 @@
 
         <!-- 启动界面 -->
         <activity
-            android:name="com.thestore.microstore.LoadingActivity"
+            android:name="com.dianpin.LoadingActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
              >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- 主页 -->
-        <activity
-            android:name="MainActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask" >
-        
-        	<intent-filter>  
-			    <action android:name="android.intent.action.VIEW"/>  
-			    <category android:name="android.intent.category.DEFAULT" />  
-			    <category android:name="android.intent.category.BROWSABLE" />  
-			    <data android:scheme="yihaovdian" android:host="myvdian_createstart" />
-			    <data android:scheme="yihaovdian" android:host="myvdian_sellerindex" />  
-			</intent-filter>     
-            
-        </activity>
-        
+        </activity>    
+       
         <!-- WebView -->
         <activity
             android:name="WebViewActivity"
@@ -117,59 +100,7 @@
             android:process=":remote" >
         </service>
 
-        <!-- native 购物车 -->
-        <activity
-            android:name=".ShopCartActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask"
-            android:label="@string/shopcart_label" />
-        
-        <!-- native 空购物车 -->
-        <activity
-            android:name=".ShopCartNoneActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask"
-            android:label="@string/shopcart_none_label" />
-        
-        
-        <!-- native 我的地址 -->
-        <activity
-            android:name=".AddressActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/address_label" />
-        
-        
-        <!-- native 我的地址列表 -->
-        <activity
-            android:name=".AddressListActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/address_list_label" />
-        
-        <!-- native 订单 -->
-        <activity
-            android:name=".OrderActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/order_label" />
-        
-        <!-- native 订单详情 -->
-        <activity
-            android:name=".OrderDetailActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask"
-            android:label="@string/shopcart_none_label" />
-        
-        
-        <!-- native 订单创建完成 -->
-        <activity
-            android:name=".OrderCreateActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/shopcart_none_label" />
-        
-        <!-- native 抵用券 -->
-        <activity
-            android:name=".CouponListActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/coupon_label" />
+    
     </application>
 
 </manifest>

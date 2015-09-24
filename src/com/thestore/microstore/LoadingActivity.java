@@ -80,7 +80,7 @@ public class LoadingActivity extends Activity{
 			clientVersion += getClientVersion();
 		} catch (NameNotFoundException e) {
 		}
-		((TextView) findViewById(R.id.welcome_version)).setText(clientVersion);
+		
 		
     	shortcut();
     	
